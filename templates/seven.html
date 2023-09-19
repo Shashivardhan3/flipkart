@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ON Click</title>
+</head>
+<body>
+    <div>
+        <p id="one">0</p>
+        <div>
+            <button onclick="Increase()">Increase</button>
+            <button onclick="Reset()">Reset</button>
+            <button onclick="Decrement()">Decrement</button>
+        </div>
+    </div>
+
+    <script>
+        let currentValue = 0; // Initialize the value to 0
+
+        function Increase() {
+            currentValue++;
+            document.getElementById('one').innerText = currentValue;
+        }
+
+        function Reset() {
+            currentValue = 0;
+            document.getElementById('one').innerText = currentValue;
+        }
+
+        function Decrement() {
+            currentValue--;
+            document.getElementById('one').innerText = currentValue;
+        }
+    </script>
+</body>
+</html>
