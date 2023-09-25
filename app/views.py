@@ -34,7 +34,8 @@ def registration(request):
             NSPO=PFD.save(commit=False)
             NSPO.username=NSUO
             NSPO.save()
-            send_mail('Registration','successfully Registration','shashivardhan072@gmail.com',[NSUO.email],fail_silently=False)
+            send_mail('Registration','successfully Registration','shashivardhan072@gmail.com',
+                      [NSUO.email],fail_silently=False)
             return HttpResponseRedirect(reverse('home'))
         else:
             return HttpResponse('Not valid')
